@@ -128,7 +128,7 @@
     left: 0;
     height: 4px;
     width: 100%;
-    background: linear-gradient(270deg, #ff4e50, #f9d423, #1fa2ff, #12c2e9, #ff4e50);
+    background: linear-gradient(270deg, black);
     background-size: 800% 100%;
     animation: animateBorder 8s linear infinite;
   }
@@ -194,26 +194,36 @@
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   }
-  @keyframes fadeInUp {
+  
+  .about-section {
+    position: relative;
+    
+    
+    width: 100%;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: border 0.5s ease;
+  }
+  
+  .about-section:hover {
+    border: 3px solid black;
+  }
+  
+
+  
+  
+  @keyframes borderFade {
     from {
       opacity: 0;
-      transform: translateY(40px);
+      transform: scale(0.95);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1);
     }
   }
   
-  @keyframes animateBorder {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-  
+
 
 
 

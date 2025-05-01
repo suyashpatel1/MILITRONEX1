@@ -1,0 +1,635 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("/career.jpg") no-repeat center center/cover;
+    z-index: -1;
+    opacity: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #navbar {
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  #navbar img#LOGO {
+    width: 300px;
+    height: 40px;
+    animation: zoomFadeIn 1.5s ease-in-out;
+    transform-origin: left center;
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: olive;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  
+  nav ul li a:hover {
+    color: olive;
+  }
+  
+  nav ul li a span {
+    display: inline-block;
+    animation: flipIn 0.9s ease forwards;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  nav ul li a span:hover {
+    transform: rotateY(360deg);
+  }
+  
+  #nav-toggle {
+    display: none;
+  }
+  
+  label[for="nav-toggle"] {
+    display: none;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  .career-section {
+    
+    
+        background-size: cover;
+        
+        background-position: center;
+        position: relative;
+        margin-top: -10px;
+        padding-top: 100px;
+        padding-bottom: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        
+        top:10px;
+        overflow: hidden;
+        
+        
+      }
+      .career-section-2,
+      .career-section-3   {
+
+background-size: cover;
+        
+background-position: center;
+position: relative;
+margin-top: -10px;
+padding-top: 100px;
+padding-bottom: 150px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+overflow: hidden;
+min-height: 100vh;
+top:10px;
+left:0px;
+overflow: hidden;
+  }
+  
+  .career-section-3{
+    background-image: url(/pexels-sumeyye-candan-179322565-16775733.jpg);
+  }
+  .career-section:hover {
+    border: 3px solid black;
+  }
+  
+  .heading-div {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    top:10px;
+    left: -410px;
+  }
+  
+  .main-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif;
+  }
+  
+  .sub-heading {
+    font-size: 30px;
+    color: white;
+  }
+  .sub-heading-1{
+          font-size: 20px;
+          color: white;
+
+  }
+  .heading-div-2 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    top:10px;
+    left: 350px;
+  }
+  
+  .main-heading-2 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif;
+  }
+  
+  .sub-heading-2 {
+    font-size: 30px;
+    color: white;
+  }
+  .sub-heading-2{
+          font-size: 20px;
+          color: white;
+
+  }
+  .heading-div-3 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    top:-50px;
+    left: -450px;
+  }
+  
+  .main-heading-3 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif;
+    color:black;
+  }
+  
+  .sub-heading-3 {
+    font-size: 30px;
+    color:black;
+  }
+  .sub-heading-3{
+          font-size: 20px;
+          color: black;
+
+  }
+  .heading-4{
+    position: relative;
+    font-size: 20px;
+    left: 150px;
+  }
+  
+  
+  #vedio-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+  }
+  
+  #bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  
+  .border-bottom {
+    width: 0;
+    max-width: 200px;
+    height: 3px;
+    background-color: black;
+    margin: 20px auto 0 auto;
+    animation: borderExpand 1.2s forwards;
+  }
+  
+  @keyframes borderExpand {
+    from {
+      width: 0;
+    }
+    to {
+      width: 200px;
+    }
+  }
+  .buttons-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    left: 10px;
+  }
+  
+  .job {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .job-box {
+    position: relative;
+    background-color: black;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+    left: 350px;
+  }
+  
+  .job-box a {position: relative;
+    font-size: 1.25rem;
+    color: whitesmoke;
+    text-decoration: none;
+    
+  }
+  
+  .job-box a:hover {
+    text-decoration: underline;
+  }
+  
+  .job-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .career-button {
+    position: relative;
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #28a745;
+    padding: 12px 25px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    left: 350px;
+  }
+  
+  .career-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #218838;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  
+  .career-button:hover::before {
+    width: 0;
+    height: 0;
+  }
+  
+  .career-button:hover {
+    color: #28a745;
+    border-color: #218838;
+  }
+  
+  .career-button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .career-section {
+    height: auto;
+    overflow: hidden;
+  }
+  .footer {
+    background-color: rgb(6, 6, 10);
+    color: white;
+    
+    text-align: center;
+    
+      box-sizing: border-box;
+      border: 2px solid white; 
+      padding: 20px;
+      
+      color: white;
+    
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-nav {
+    margin-bottom: 2rem;
+  }
+  
+  .footer-nav h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: olive;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  
+  .footer-nav ul li a {
+    color: #ddd;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: olive;
+  }
+  
+  .footer-quote {
+    margin: 2rem 0;
+  }
+  
+  .footer-quote h2 {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .social-icons {
+    margin: 1.5rem 0;
+  }
+  
+  .social-icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: white;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .social-icons i:hover {
+    transform: scale(1.3);
+    color: olive;
+  }
+  
+  footer .copyright {
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  .main-heading,
+  .main-heading-2,
+  .main-heading-3,
+  .sub-heading,
+  .sub-heading-1,
+  .sub-heading-2,
+  .sub-heading-3,
+  .heading-4 {
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+      text-align: center;
+  }
+  
+  .sub-heading,
+  .sub-heading-1,
+  .sub-heading-2,
+  .sub-heading-3,
+  .heading-4 {
+      animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(30px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  @media (max-width: 768px) {
+      #navbar {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+      #LOGO {
+          margin-bottom: 10px;
+          width: 180px;
+          height: auto;
+      }
+      label[for="nav-toggle"] {
+          display: block;
+          font-size: 1.8rem;
+          color: white;
+      }
+      .nav-list {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          gap: 1rem;
+          margin-top: 1rem;
+          text-align: left;
+      }
+      #nav-toggle:checked ~ nav .nav-list {
+          display: flex;
+      }
+      .hamburger {
+          display: block;
+          margin-left: 0;
+      }
+      #Careers-1,
+      #Careers-2,
+      #Careers-3 {
+          padding: 20px;
+          text-align: center;
+      }
+      .heading-div{position: relative;
+        margin-bottom: 20px;
+        text-align: center;
+        left: -50px;
+        top: -10px;
+      }
+    .heading-div-2{
+      position: relative;
+      margin-bottom: 20px;
+      text-align: center;
+      left: 50px;}
+      .heading-div-3 {
+        position: relative;
+          margin-bottom: 20px;
+          text-align: center;
+          left: 20px;
+          top: 50px;
+          
+      }
+      .main-heading{
+        font-size: 10px;
+      }
+      .main-heading-2,
+      .main-heading-3 {
+          font-size: 1.8rem;
+          text-align: center;
+      }
+  .sub-heading{
+    position: relative;
+    font-size: 5px;
+    top: -40px;
+  }
+      .sub-heading-1{
+        position: relative;
+        font-size: 3px;
+        top: -60px;
+      }
+      .sub-heading-2,
+      .sub-heading-3 {
+          font-size: 1.2rem;
+          text-align: center;
+      }
+      .heading-0{
+        position: relative;
+        left: 300px;
+      }
+      .heading-4{
+        position: relative;
+        left: -10px;
+        top: 10px;
+      }
+      .buttons-div {
+        position: relative;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          left: -300px;
+      }
+      .career-button {
+          width: 90%;
+          padding: 12px;
+          text-align: center;
+          font-size: 1rem;
+      }
+      .job {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      .job-box {
+          text-align: center;
+      }
+      .job-box a {
+          font-size: 1rem;
+      }
+      p {
+          font-size: 1rem;
+          text-align: center;
+      }
+      #vedio-container {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+      }
+      #bg-video {
+          width: 100%;
+          height: auto;
+          max-height: 300px;
+          object-fit: cover;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .main-heading,
+      .main-heading-2,
+      .main-heading-3 {
+          font-size: 1.6rem;
+      }
+      .sub-heading,
+      .sub-heading-1,
+      .sub-heading-2,
+      .sub-heading-3 {
+          font-size: 1rem;
+      }
+      .career-button {
+          width: 90%;
+          padding: 12px;
+          font-size: 1rem;
+      }
+      .job-box a {
+          font-size: 1rem;
+      }
+      p {
+          font-size: 0.9rem;
+      }
+      #bg-video {
+          max-height: 250px;
+      }
+  }
+  

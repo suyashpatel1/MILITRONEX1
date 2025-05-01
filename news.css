@@ -204,7 +204,8 @@
   
   .newsroom-section:hover::after {
     transform: translateX(-50%) scaleX(1);
-  }.footer {
+  }
+  .footer {
     background-color: rgb(6, 6, 10);
     color: white;
     

@@ -37,6 +37,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin: 0;
 }
 
 #navbar img#LOGO {
@@ -106,7 +107,9 @@ label[for="nav-toggle"] {
   cursor: pointer;
 }
 
-
+#main{
+  padding: auto;
+}
 
 #Mission,
 #Need-For-MILITRONEX,
@@ -116,8 +119,9 @@ label[for="nav-toggle"] {
   
   background-position: center;
   position: relative;
+  margin-top: -10px;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -125,8 +129,14 @@ label[for="nav-toggle"] {
   overflow: hidden;
   min-height: 100vh;
   top:10px;
+  overflow: hidden;
+  max-height: 1000px;
   
 }
+
+
+
+
 #content-1{
 color:whitesmoke;
 
@@ -255,7 +265,7 @@ position: relative;
 
 
 #headline-831-24{ position: relative;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 70px;
   justify-content: left;
@@ -265,7 +275,7 @@ position: relative;
 margin-top: 180px;
 transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation: fadeInUp 1.5s ease-out forwards;
-  top:-150px;
+  top:-250px;
   left: 400px;}
 
   
@@ -286,6 +296,7 @@ transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   
 }
 #explore-heading{
+  
 
   display: flex;
   position: relative;
@@ -300,16 +311,122 @@ transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation: fadeInUp 1.5s ease-out forwards;
   
   top:20px;
-  left: -400px;
-
-
-
-
+  left:-50px;
 }
 
 #heading-0,
 #headline-831-24 {
   color: whitesmoke;
+}
+.explore-container {
+  position: relative;
+  display: flex;
+  gap: 60px; 
+  padding: 20px;
+  justify-content: center; 
+  align-items: center; 
+  top: 300px;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px; 
+  height: 320px;
+  perspective: 1000px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 15px; 
+  transition: box-shadow 0.3s ease-in-out; 
+}
+
+.card:hover {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5); 
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6); 
+  color:whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  opacity: 100%;
+}
+
+.card-back h2, .card-back p, .card-back .explore-btn {
+  position: relative;
+  z-index: 2;
+}
+
+.card-back h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.card-back p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.explore-btn {
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+  background-color: #e65c00;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff6600;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 50%;
+  z-index: 5;
 }
 
 #heading-123 {
@@ -482,7 +599,7 @@ footer .copyright {
   letter-spacing: 1px;
   transition: all 0.3s ease;
   position: relative;
-  bottom: 400px;
+  bottom: 500px;
   left: 282px;
   
   transform: translateX(-50%);
@@ -513,6 +630,20 @@ footer .copyright {
 
 .ct-link-button:hover::before {
   transform: translate(-50%, -50%) scale(1);
+}
+#vedio-container-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+}
+
+#bg-video-2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 1120px) {
@@ -626,7 +757,7 @@ footer .copyright {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768  +`````````````````````````````````````````````````````````````````````````````````````px) {
   
   #Mission,
   #Need-For-MILITRONEX,
@@ -659,7 +790,7 @@ footer .copyright {
   
 #heading-3 {
   position: relative;
-  font-size: 5px;
+  font-size: 15px;
   top: -28px;}
 
   #need-1 {
@@ -689,8 +820,8 @@ footer .copyright {
     margin: auto;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     animation: fadeInUp 1.5s ease-out forwards;
-    top: 50px;
-    left: -10px;}
+    top: 100px;
+    left: -50px;}
   
   #Explore,
   #Explore-2,
@@ -715,5 +846,50 @@ footer .copyright {
     left: -1%;
     bottom: 100px;
     margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .explore-container {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    top: 80px;
+  }
+
+  .card {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .card-front img {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 150px; 
+    width: 150px;
+  }
+
+  .card-front img {
+    height: 100%; 
+    object-fit: cover;
+  }
+
+  .card-back h2 {
+    font-size: 1.1rem;
+  }
+
+  .card-back p {
+    font-size: 0.8rem;
+  }
+
+  .explore-btn {
+    padding: 7px 12px;
+    font-size: 0.8rem;
   }
 }
